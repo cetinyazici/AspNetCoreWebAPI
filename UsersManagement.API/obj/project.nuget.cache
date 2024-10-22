@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Bpi+BsEI/oeH37STcqnn1+GporfOODxrdaPCucSRDTgA/UFIt/1osLoWmWJPVkkVBx6MqAsi3kb/HE1h+A1KyA==",
+  "dgSpecHash": "uJEZhHdrhdCPZdUXH1SOrDbmIq8OAci8XqH9+iaTBU3SI9sFFlFE+nG+DNyK6Pvk9TGjmKYtt89ID3NT6vuSrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\AspNetCoreWebAPILessons\\UsersManagement.API\\UsersManagement.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\bogus\\35.6.1\\bogus.35.6.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",

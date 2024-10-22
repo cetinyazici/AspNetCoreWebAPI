@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\AspNetCoreWebAPILessons\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7831B9-34D4-4D3C-AAB9-8182F660060D}|UsersManagement.API\\UsersManagement.API.csproj|c:\\users\\lenovo\\desktop\\aspnetcorewebapilessons\\usersmanagement.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7831B9-34D4-4D3C-AAB9-8182F660060D}|UsersManagement.API\\UsersManagement.API.csproj|solutionrelative:usersmanagement.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7831B9-34D4-4D3C-AAB9-8182F660060D}|UsersManagement.API\\UsersManagement.API.csproj|c:\\users\\lenovo\\desktop\\aspnetcorewebapilessons\\usersmanagement.api\\fake\\fakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7831B9-34D4-4D3C-AAB9-8182F660060D}|UsersManagement.API\\UsersManagement.API.csproj|solutionrelative:usersmanagement.api\\fake\\fakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\AspNetCoreWebAPILessons\\UsersManagement.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "UsersManagement.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\AspNetCoreWebAPILessons\\UsersManagement.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "UsersManagement.API\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T21:37:06.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FakeData.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\AspNetCoreWebAPILessons\\UsersManagement.API\\Fake\\FakeData.cs",
+              "RelativeDocumentMoniker": "UsersManagement.API\\Fake\\FakeData.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\AspNetCoreWebAPILessons\\UsersManagement.API\\Fake\\FakeData.cs",
+              "RelativeToolTip": "UsersManagement.API\\Fake\\FakeData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T21:20:57.057Z",
+              "EditorCaption": ""
             }
           ]
         }
