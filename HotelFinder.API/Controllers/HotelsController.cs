@@ -33,7 +33,8 @@ namespace HotelFinder.API.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("[action]/{id}")]
         public IActionResult GetHotelById(int id)
         {
             var hotel = _hotelService.GetHotelById(id);
@@ -42,6 +43,53 @@ namespace HotelFinder.API.Controllers
                 return Ok(hotel); //200 + data
             }
             return NotFound();
+        }
+
+        /// <summary>
+        /// Get a hotel by its Name.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("[action]/{name}")]
+        public IActionResult GetHotelByName(string name)
+        {
+            var hotelName = _hotelService.GetHotelByName(name);
+            if (hotelName is not null)
+            {
+                return Ok(hotelName);
+            }
+            return BadRequest();
+
+        }
+
+        /// <summary>
+        /// Get a hotel by its Name or ID.
+        /// </summary>
+        /// <param name="name">The name of the hotel</param>
+        /// <param name="id">The ID of the hotel</param>
+        /// <returns>A hotel matching the name or ID</returns>
+        [HttpGet]
+        [Route("[action]")]
+        public IActionResult GetHotelByNameOrId(string? name, int? id)
+        {
+            if (!string.IsNullOrEmpty(name))
+            {
+                var hotelByName = _hotelService.GetHotelByName(name);
+                if (hotelByName != null)
+                {
+                    return Ok(hotelByName);
+                }
+            }
+            if (id.HasValue)
+            {
+                var hotelById = _hotelService.GetHotelById(id.Value);
+                if (hotelById != null)
+                {
+                    return Ok(hotelById);
+                }
+            }
+            return NotFound("No hotel found with the provided name or ID.");
         }
 
         /// <summary>
