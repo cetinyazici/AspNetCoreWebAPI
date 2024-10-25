@@ -22,9 +22,9 @@ namespace HotelFinder.API.Controllers
         /// </summary>
         /// <returns>List of hotels</returns>
         [HttpGet]
-        public IActionResult GetHotels()
+        public async Task<IActionResult> GetHotels()
         {
-            var hotels = _hotelService.GetAllHotels();
+            var hotels = await _hotelService.GetAllHotels();
             return Ok(hotels); //200 + data
         }
 

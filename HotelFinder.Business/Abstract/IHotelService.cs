@@ -9,7 +9,7 @@ namespace HotelFinder.Business.Abstract
 {
     public interface IHotelService
     {
-        List<Hotel> GetAllHotels();
+        Task<List<Hotel>> GetAllHotels();
         Hotel GetHotelById(int id);
         Hotel GetHotelByName(string name);
         Hotel CreateHotel(Hotel hotel);
