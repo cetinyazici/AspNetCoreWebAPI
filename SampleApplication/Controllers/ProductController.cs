@@ -4,6 +4,7 @@ using SampleApplication.Models;
 
 namespace SampleApplication.Controllers
 {
+    [NonController]
     public class ProductController : Controller
     {
         #region ViewResult
@@ -52,6 +53,18 @@ namespace SampleApplication.Controllers
                 return Content("Metinsel Değer....");
             }
             return View();
+        }
+        #endregion
+        #region NonAction 
+        public IActionResult Index()
+        {
+            X();
+            return View();
+        }
+        [NonAction]
+        public void X()
+        {
+            //işlemler
         }
         #endregion
     }
