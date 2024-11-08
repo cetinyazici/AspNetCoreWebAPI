@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SampleApplication.Models;
+using System.Text.Json;
 
 namespace SampleApplication.Controllers
 {
-    [NonController]
+    //[NonController]
     public class ProductController : Controller
     {
         #region ViewResult
@@ -67,5 +68,39 @@ namespace SampleApplication.Controllers
             //işlemler
         }
         #endregion
+        #region Model, ViewBag, ViewData, TempData
+        public IActionResult Index1()
+        {
+            var products = new List<Product>()
+            {
+                new Product { Id = 1,Name="Name1",Description="Description1" },
+                new Product { Id = 2,Name="Name2",Description="Description2" },
+                new Product { Id = 3,Name="Name3",Description="Description3" },
+            };
+            ViewBag.products = products;
+            ViewData["products"] = products;
+
+            var data = JsonConvert.SerializeObject(products);
+            TempData["productsTempData"] = data;
+
+            ViewBag.x = 5;
+            ViewData["x"] = 5;
+            TempData["x"] = 5;
+
+            return RedirectToAction("Index2", "Product");
+        }
+
+        public IActionResult Index2()
+        {
+            var data = TempData["productsTempData"].ToString();
+            JsonConvert.DeserializeObject<List<Product>>(data);
+            var v1 = ViewBag.x;
+            var v2 = ViewData["x"];
+            var v3 = TempData["x"];
+            return View();
+        }
+        #endregion
+
     }
 }
+

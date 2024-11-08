@@ -1,0 +1,66 @@
+﻿@* @model IEnumerable<SampleApplication.Models.Product>
+
+@{
+    ViewData["Title"] = "Index1";
+}
+
+<h1>Index1</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@
+
+<h3> ViewBag</h3>
+@foreach (var item in ViewBag.products as List<Product>)
+{
+    <p>@item.Name</p>
+}
+
+
+<h3> ViewData</h3>
+@foreach (var item in ViewData["products"] as List<Product>)
+{
+    <p>@item.Name</p>
+}
+
+<h3>TempData</h3>
+@foreach (var item in TempData["productsTempData"] as List<Product>)
+{
+    <p>@item.Name</p>
+}
