@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SampleApplication.Models;
+using SampleApplication.Models.ViewModels;
+using System.Reflection;
 using System.Text.Json;
 
 namespace SampleApplication.Controllers
@@ -98,6 +100,30 @@ namespace SampleApplication.Controllers
             var v2 = ViewData["x"];
             var v3 = TempData["x"];
             return View();
+        }
+        #endregion
+
+        #region
+        public IActionResult GetProductAndUser()
+        {
+            Product product = new Product();
+            product.Id = 1;
+            product.Name = "ProductName";
+            product.Description = "ProductDescription";
+
+            User user = new User();
+            user.Id = 1;
+            user.UserName = "UserName";
+            user.UserSurname = "UserSurname";
+
+            //ProductUser productUser = new ProductUser();
+            //productUser.Product = product;
+            //productUser.User = user;
+
+            var productUser = (product, user);
+
+            //return View(productUser);
+            return View(productUser);
         }
         #endregion
 

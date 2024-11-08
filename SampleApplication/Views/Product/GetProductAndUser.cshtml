@@ -1,0 +1,26 @@
+﻿@* @model SampleApplication.Models.ViewModels.ProductUser
+@{
+    ViewData["Title"] = "GetProductAndUser";
+}
+
+<h1>GetProductAndUser</h1>
+
+<h4>@Model.Product.Name</h4>
+<h4>@Model.User.UserSurname</h4>
+
+ *@
+
+ @model (SampleApplication.Models.Product product,SampleApplication.Models.User user)
+
+<h4>@Model.Item1.Name</h4>
+<h4>@Model.Item1.Description</h4>
+<br />
+<h4>@Model.Item2.UserName</h4>
+<h4>@Model.Item2.UserSurname</h4>
+<br />
+<br />
+<h4>@Model.product.Name</h4>
+<h4>@Model.product.Description</h4>
+<br />
+<h4>@Model.user.UserName</h4>
+<h4>@Model.user.UserSurname</h4>
