@@ -102,8 +102,7 @@ namespace SampleApplication.Controllers
             return View();
         }
         #endregion
-
-        #region
+        #region Tuple
         public IActionResult GetProductAndUser()
         {
             Product product = new Product();
@@ -125,6 +124,9 @@ namespace SampleApplication.Controllers
             //return View(productUser);
             return View(productUser);
         }
+        #endregion
+        #region UrlHelper - HtmlHelper 
+
         #endregion
 
     }

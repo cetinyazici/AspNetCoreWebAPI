@@ -24,3 +24,8 @@
 <br />
 <h4>@Model.user.UserName</h4>
 <h4>@Model.user.UserSurname</h4>
+
+@Html.TextBox("adınızı girin..", null, new { style = "color:red;background-color:yellow" })
+<br />
+@using SampleApplication.Extensions
+@Html.CustomTextBox("CustomName", null, "Adınızı giriz...")
