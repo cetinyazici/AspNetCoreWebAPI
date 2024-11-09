@@ -125,9 +125,6 @@ namespace SampleApplication.Controllers
             return View(productUser);
         }
         #endregion
-        #region UrlHelper - HtmlHelper 
-
-        #endregion
 
     }
 }
