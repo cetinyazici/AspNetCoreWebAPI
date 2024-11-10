@@ -125,7 +125,21 @@ namespace SampleApplication.Controllers
             return View(productUser);
         }
         #endregion
-
+        #region Model Binding
+        public IActionResult CreateProduct()
+        {
+            var product = new Product();
+            product.Id = 1;
+            product.Name = "Deneme";
+            product.Description = "Deneme";
+            return View(product);
+        }
+        [HttpPost]
+        public IActionResult CreateProduct(Product product)
+        {
+            return View();
+        }
+        #endregion
     }
 }
 
