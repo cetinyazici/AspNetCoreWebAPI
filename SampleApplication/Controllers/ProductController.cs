@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using SampleApplication.Models;
 using SampleApplication.Models.ViewModels;
+using System.Drawing;
 using System.Reflection;
 using System.Text.Json;
 
@@ -138,6 +139,14 @@ namespace SampleApplication.Controllers
         public IActionResult CreateProduct(Product product)
         {
             return View();
+        }
+
+        //public IActionResult Test(string id)
+        public IActionResult Test(RouteData datas)
+        {
+            var values = Request.RouteValues;
+            return View();
+
         }
         #endregion
     }
