@@ -149,6 +149,21 @@ namespace SampleApplication.Controllers
 
         }
         #endregion
+        [HttpGet]
+        public IActionResult ClassMyy()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ClassMyy(ClassMy data)
+        {
+            return View();
+        }
+    }
+    public class ClassMy
+    {
+        public string? A { get; set; }
+        public string? B { get; set; }
     }
 }
 
