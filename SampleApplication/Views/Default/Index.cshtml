@@ -1,0 +1,12 @@
+﻿@model (Product,User)
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tuple Kullanımı Veri Karşılama olayı.</h1>
+<form asp-action="Index" asp-controller="Default" method="post">
+    <input type="text" asp-for="Item1.Name" placeholder="Product Name" /><br />
+    <input type="text" asp-for="Item2.UserName" placeholder="User Name" /><br />
+    <button class="btn btn-success">Gönder</button>
+</form>
+
