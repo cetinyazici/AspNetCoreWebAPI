@@ -1,3 +1,5 @@
+using FluentValidation.AspNetCore;
+
 namespace SampleApplication
 {
     public class Program
@@ -7,7 +9,7 @@ namespace SampleApplication
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews().AddFluentValidation(fv=>fv.RegisterValidatorsFromAssemblyContaining<Program>());
 
             var app = builder.Build();
 
