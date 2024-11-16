@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using SampleApplication.Models.ModelMetadataTypes;
+using System.ComponentModel.DataAnnotations;
 
 namespace SampleApplication.Models
 {
+    [ModelMetadataType(type: typeof(ProductMetadata))]
     public class Product
     {
         public int Id { get; set; }

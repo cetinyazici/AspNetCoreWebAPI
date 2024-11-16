@@ -5,6 +5,9 @@
 
 <h1>Create Product</h1>
 <br />
+<div asp-validation-summary="All">
+    @* tüm hatalar burada gelecek başka bir kullanım.. *@
+</div>
 <form asp-action="CreateProduct" asp-controller="Default" method="post">
     <input type="text" asp-for="Name" placeholder="Product Name" /><br />
     <span class="text-danger" asp-validation-for="Name"></span><br />

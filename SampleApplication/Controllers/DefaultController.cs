@@ -25,7 +25,8 @@ namespace SampleApplication.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.ErrorMessage = ModelState.Values.FirstOrDefault(x => x.ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid).Errors[0].ErrorMessage;
+                //ViewBag.ErrorMessage = ModelState.Values.FirstOrDefault(x => x.ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid).Errors[0].ErrorMessage;
+                var message = ModelState.ToList();
                 return View(product);
             }
             return View();
