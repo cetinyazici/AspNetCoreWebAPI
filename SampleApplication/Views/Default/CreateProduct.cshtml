@@ -19,5 +19,7 @@
     <input type="email" asp-for="Email" placeholder="Email" /><br />
     <span class="text-danger" asp-validation-for="Email"></span><br />
     <button class="btn btn-success">Gönder</button>
-</form>
+</form><br />
+
+@await Component.InvokeAsync("Personeller")
 
